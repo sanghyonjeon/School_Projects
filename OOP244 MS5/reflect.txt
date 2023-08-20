@@ -1,0 +1,102 @@
+/***********************************************************************
+                       Final Project - Milestone 5
+// Full Name  : Sang Hyon Jeon
+// Student ID#: 113552194
+// Email      : shjeon5@myseneca.ca
+// Section    : NBB
+// Date       : April 16, 2023
+//
+// Authenticity Declaration:
+// I have done all the coding by myself and only copied the code that my
+// professor provided to complete my workshops and assignments.
+***********************************************************************/
+In the first Milestone, I initiated the project by developing a mock-up
+module for the Point of Sale (POS) system called PosApp. This module
+aimed to present users with a menu of features, enabling them to select
+and execute their desired actions. I established the PosApp class with
+essential methods, such as the menu method that displays the system menu
+and collects user inputs. Additionally, I implemented mock-up methods
+for actions like adding, removing, and listing items, as well as POS
+functionality. This development stage primarily focused on constructing
+the structure and demonstrating the system's basic flow without
+incorporating actual functionality.
+
+In developing Milestone 2, I created a general header file, POS.h, to
+store constant values required throughout the project. Subsequently, I
+developed an Error class to manage error states and messages within the
+application. This class helps maintain system integrity by monitoring
+and managing potential errors. Next, I implemented the Date class,
+responsible for encapsulating date and time properties. By utilizing the
+provided functions, I ensured the class could validate and handle dates
+accurately, accounting for leap years and other calendar considerations.
+Throughout the Date class implementation, I paid close attention to
+details such as proper error handling, overloading comparison operators,
+and implementing ostream insertion and istream extraction operator
+overloads.
+
+In Milestone 3, I incorporated several constant values into the POS.h
+header file to facilitate the implementation of PosIO and Item classes.
+The PosIO class serves as an interface for console and file input and
+output operations, containing four pure virtual methods and a virtual
+empty destructor. I also implemented insertion and extraction operator
+overloads for this class. I then created the Item class to encapsulate
+items to be sold by the POS system. This class contains private
+attributes such as SKU, name, price, tax status, and quantity. I
+implemented various member operator overloads, type conversions, and
+methods to streamline item management. I also applied the rule of three
+to ensure safe copying, assignment, and destruction of Item objects.
+Throughout Milestone 3, I carefully implemented and tested the methods
+for both PosIO and Item classes, ensuring proper functionality and error
+handling.
+
+Milestone 4 involved implementing two new classes derived from the Item
+class: NonPerishable and Perishable. For the NonPerishable class, I
+overrode the itemType method to return the character 'N' to identify
+non-perishable items. I also overrode the write method to complete the
+writing of an Item in POS_LIST and POS_FORM. I also developed the
+Perishable class, which included an additional Date attribute for
+perishable items' expiry dates. I overrode the itemType method to return
+the character 'P' for perishable items. I then overrode the input and
+output methods (read, write, load, and save) for the Perishable class to
+handle the expiry date attribute. Throughout Milestone 4, I ensured
+accurate and functional implementation of NonPerishable and Perishable
+classes, considering different display modes and error handling 
+requirements.
+
+Milestone 5 centered on finalizing the POS system's functionalities,
+including the Bill class and completing the PosApp code. MS51
+implemented the loadRecs and saveRecs methods, where loadRecs loaded
+records from the data file into the Iptr array, creating dynamic
+instances of Items, either Perishable or NonPerishable, while saveRecs
+saved all items pointed by the Iptr array in the data file. MS52
+introduced the addItem method, allowing users to add new items to the
+inventory by creating either a Perishable or NonPerishable Item based on
+the item's perishability and adding it to the Iptr array. MS53
+implemented the selectItem and removeItem methods, with selectItem
+enabling users to list items and choose an item by entering its row
+number, and removeItem facilitating item removal through selectItem and
+deallocating and removing the chosen item from the Iptr array. MS54
+involved implementing the stockItem method, which allowed users to
+select an item to stock and add a specified quantity to the existing
+quantity by using the selectItem method to obtain the row number of the
+desired item and updating the item's quantity accordingly. MS55
+concluded the project by implementing the POS() method, which prompted
+users for an item's SKU to sell, checked if the SKU was found and the
+item was available (m_quantity > 0), reduced the item quantity by one, 
+added the item to the Bill, and printed the total price of the bill.
+Overall, Milestone 5 was essential in completing the POS system,
+providing an understanding of inventory management, item operations, and
+sales transactions within a well-structured program.
+
+In conclusion, this reflection details the development of a
+comprehensive Point of Sale (POS) system through five milestones, each
+building upon the previous one to create a fully functional and
+efficient system. The process involved careful planning, methodical
+implementation, and detailed testing to ensure accurate and
+user-friendly functionality. By working with the complexities of various
+classes and their interactions, I gained invaluable experience in
+inventory management, item operations, and sales transactions. This
+project not only showcased the importance of well-structured programming
+but also demonstrated the power of incremental development in creating a
+cohesive and effective POS system, ultimately enhancing my programming
+skills and deepening my understanding of real-world applications.

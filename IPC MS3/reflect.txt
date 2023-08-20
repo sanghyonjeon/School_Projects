@@ -1,0 +1,122 @@
+*****************************************************************************
+                              Reflection
+                          Assignment 1 - Milestone 3
+Full Name  : Sang Hyon Jeon
+Student ID#: 113552194
+Email      : shjeon5@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Three prototypes of the functions that I created are:
+
+FUNCTION 1:
+int findLowestApptDate(const struct Appointment appointment[], int max);
+
+The purpose of this function was to find the index of the patient array with
+the earliest date and time. This function was very valuable, because it helped
+simplify the process of sorting the appointments in ascending order by date
+and time.
+
+FUNCTION 2:
+void sortApptData(struct Appointment appointment[], int max);
+
+The purpose of this function was to sort the elements in the appointment array
+in ascending order by date and time. This function was valuable because it
+allowed for an organized appointment data to work with.
+
+FUNCTION 3:
+struct Date getApptDate(void);
+
+Taking leap year into consideration, the purpose of this function was to prompt
+the user for a valid date (year, month, and day). This function was valuable
+because it reduced the number of lines of code needed whenever the date needed
+to be inputted by the user.
+
+Ultimately, the common purpose of these functions were to simplify the code. They
+eliminated the need for many lines of repetitive code by a simple function call.
+This is very valuable to a programmer, because lines of code take up space in
+computer memory.
+
+2. In my code, the "addAppointment" function includes lines 488-576 (including
+comments and new lines). This is roughly 89 lines of code. In this function,
+the functions I called to help with readability and maintainability of the code
+were:
+
+Line 513: inputIntPositive
+- Example: Prompting user for a valid patient number
+Line 516: findPatientIndexByPatientNum
+- Example: Finding index of the patient array to check if a certain patient exists
+Line 526: getApptDate
+- Example: Prompting the user for a valid date, considering leap year
+Line 527: getApptTime
+- Example: Prompting the user for a valid time, considering operating hours and
+valid minute intervals
+Line 573: sortApptData
+- Example: Sorting the appointment data in ascending order by date and time
+
+Each function mentioned contains 28, 24, 42, 29, 31 lines of code, respectively.
+Although these lines include some empty lines and comments, these 5 functions
+total to 154 lines of code. This means that in the function, "addAppointment",
+I was able to save roughly around 149 lines of code:
+
+(154 lines of code - 5 lines to call all 5 functions = 149 lines of code saved)
+
+3. This is the breakdown of my week for Milestone 3:
+
+FUNCTIONS TO COMPLETE:
+viewAllAppointments
+viewAppointmentSchedule
+addAppointment
+removeAppointment
+importPatients
+importAppointments
+
+FUNCTIONS TO CREATE:
+findLowestApptDate
+sortApptData
+getApptDate
+getApptTime
+
+MONDAY
+I read the instructions in the .pdf file provided to us, to know what we are
+expected to do. I began by copying and pasting the necessary code from Milestone 2
+to Milestone 3.
+
+TUESDAY
+I began with the two import functions (importPatients and importAppointments), which
+required the coding of sortApptData function, which required the coding of the
+findLowestApptDate function. I was struggling already, because my compiler didn't
+seem to recognize the patient and appointment data .txt files.
+
+WEDNESDAY
+After many stressful hours of debugging the import functions, I reached out to my
+professor, who advised me to use the absolute path name of the data files, instead of
+their filenames, until the submission. The files were now being read, so I was able to
+start the viewAllAppointments function.
+
+THURSDAY
+Halfway through coding the viewAllAppointments function, I realized that the patient
+and appointment data files were not being read properly. I had to go back to fix my
+import functions. With the import functions now working properly, I was able to finish
+up the viewAllAppointments, as well as the viewAppointmentSchedule function, which
+required the coding of the getApptDate function.
+
+FRIDAY
+The whole day and night, I worked on the addAppointment function and started coding
+the removeAppointment function. The addAppointment function required the coding of
+the getApptTime function.
+
+SATURDAY
+I finished up the removeAppointment function, and reviewed my code, to prepare for
+submission. I used an empty reflect.txt file to test the code, and make sure the outputs
+match the solution. I spent the day debugging the minor mistakes in my code, and adding
+comments as necessary. I spent the night finishing up the reflection part of the
+Milestone 3.
+
+SUNDAY
+Final review before submitting the Milestone 3 before the deadline.

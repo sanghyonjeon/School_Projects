@@ -1,0 +1,61 @@
+// Name: Sang Hyon Jeon
+// Seneca Student ID: 113552194
+// Seneca email: shjeon5@myseneca.ca
+// Date of completion: August 5, 2023
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+
+In the final project of OOP345, I implemented an assembly line that
+fills customer orders from an inventory. The project covered various
+aspects of C++ programming including handling raw memory, reading data
+from files, creating and managing classes, object-oriented programming,
+and using various STL containers. It was an incredibly enriching
+experience and pushed me to apply all the knowledge I'd garnered
+throughout the course.
+
+In Milestone 1, I implemented two modules: Utilities and Station. The
+Utilities module extracted tokens from strings and the Station module
+managed an inventory of products. I had to manage a static variable for
+field width and provide functions to manipulate and fetch this variable.
+I learned how to deal with static class members and how they can be used
+to share data across all instances of a class. The Station module was
+designed to simulate an inventory system, so it was important to
+properly manage data within it and maintain the integrity of the
+inventory.
+
+For the second milestone, I designed the CustomerOrder class. This class
+was complex, containing a nested Item struct and a dynamically allocated
+array of pointers. This taught me to carefully manage dynamic memory in
+C++ and ensure there were no memory leaks. I had to implement the Rule
+of Five, including custom constructors, a move constructor, and move
+assignment operator while disabling copy operations.
+
+The third milestone included two modules: Workstation and LineManager.
+Workstation was derived from Station and managed the processing of
+orders. LineManager managed the active stations and orders. These
+modules taught me how to design and manage complex systems and how to
+interact with them in an efficient manner. Understanding how to
+efficiently manage and process objects in different stages was a
+significant part of this milestone.
+
+Overall, the final project was a deep dive into C++ programming,
+exploring the topics of dynamic memory management, inheritance,
+encapsulation, data extraction, STL containers, and operator overloading
+among other concepts. This project made me understand the importance of
+design decisions, memory management, and most importantly, how to create
+complex yet efficient systems using object-oriented programming in C++.
+It was truly an eye-opening experience that I believe has prepared me
+to tackle real-world problems using C++.
+
+Reflecting on the OOP345 course, I feel incredibly fortunate for having
+switched into this class under the guidance of such an organized,
+knowledgeable, and accessible instructor. The switch at the beginning of
+the course turned out to be one of the best decisions I've made, as our
+instructor genuinely cared about each student's learning progress. His
+unique teaching approach made every class enjoyable, despite the
+course's complexity which, I'll admit, led to (many) moments of
+hair-pulling and tears (of pure joy, of course T_T). But, Professor Hong
+Huang masterfully ensured that we had a healthy dose of "fun" mixed with
+the challenges. It sure was a journey of learning, some laughter, and
+loads of "fun" – a journey that I am grateful to have taken.
