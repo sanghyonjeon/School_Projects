@@ -1,7 +1,7 @@
 # Project: Simple Point Of Sale System
 This project is a simple Point of Sale (POS) application that keeps track of a small inventory of Goods to sell and can sell them at the cashier, issuing a bill of sale. 
 
-## Milestones due dates
+## Milestones
 This project will be done in 5 milestones
 
 ## Project Implementation notes:
@@ -596,8 +596,6 @@ The tester program for all MS5 submissions is the same <a href="MS5/main.cpp" ta
 The file <a href="MS5/posdataOrigin.csv" target="_blank">posdataOrigin.csv</a> contains some sample data that is added to help you debug your code. The data in this file overwrites the data file the <a href="MS5/main.cpp" target="_blank">main.cpp</a> uses every time it runs, to make sure you always start your program with the same data set, so you can debug your code more easily. 
 
 Also, the content of the data file is displayed before and after the POS test is done so you can track the data changes and make sure your program works correctly. 
-
-> Note that the content of the initial data may and probably will change when you are submitting your project milestones (by the submitter program). Each data set will have the information needed to check the logic that is being tested at the time. 
 
 
 # Milestone 5 implementation
