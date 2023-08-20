@@ -1,58 +1,12 @@
 # Project Overview
 
-The purpose of this term project is to put your C++ Object Oriented skills to practice by developing a simulation of an assembly line with any number of stations. A line with 3 Stations is illustrated in the figure below.
+The purpose of this term project is to put my C++ Object Oriented skills to practice by developing a simulation of an assembly line with any number of stations. A line with 3 Stations is illustrated in the figure below.
 
 ![Assembly Line](assemblyline.jpg)
 
-The assembly line in your solution consists of a set of workstations each of which holds a set of stock items, which are specific to the station. A line manager moves customer orders along the line filling the orders at each station, as requested. Each customer order consists of a list of items that need to be filled. Each station processes a queue of orders by filling the next order in the queue if that order requests the station's item and that item is in stock. The line manager keeps moving the customer orders from station to station until all orders have been processed. Any station that has used all the items in stock cannot fill any more orders. At the end of the line orders are either completed or incomplete due to a lack of inventory at one or more stations. The simulator lists the completed orders and those that are incomplete once the line manager has finished processing all orders.
+The assembly line in this solution consists of a set of workstations each of which holds a set of stock items, which are specific to the station. A line manager moves customer orders along the line filling the orders at each station, as requested. Each customer order consists of a list of items that need to be filled. Each station processes a queue of orders by filling the next order in the queue if that order requests the station's item and that item is in stock. The line manager keeps moving the customer orders from station to station until all orders have been processed. Any station that has used all the items in stock cannot fill any more orders. At the end of the line orders are either completed or incomplete due to a lack of inventory at one or more stations. The simulator lists the completed orders and those that are incomplete once the line manager has finished processing all orders.
 
-The project is divided into 3 milestones to help guide you through implementation, debugging and execution. This application is more complex than any one of the workshops and it is recommended that you plan your work accordingly.
-
-
-
-## Project Deadlines
-
-The deadlines for the project's milestones are on Saturday evenings at midnight EDT (see the schedule below).
-
-| Milestone | Date    |
-| --------- | ------- |
-| #1        | Jul 15  |
-| #2        | Jul 22  |
-| #3        | Aug 05  |
-
-
-All files that you submit (`*.h` and `*.cpp`) should contain the following comment at the top (with your information filled):
-```cpp
-// Name:
-// Seneca Student ID:
-// Seneca email:
-// Date of completion:
-//
-// I confirm that I am the only author of this file
-//   and the content was created entirely by me.
-```
-
-**Milestone #3** can be submitted after August 5 until August 15, with a penalty of 10% for each day late. After August 15 2023, the submission process is considered closed.
-
-- submissions received on Aug  6 2023 can receive **max 90%**;
-- submissions received on Aug  7 2023 can receive **max 80%**;
-- submissions received on Aug  8 2023 can receive **max 70%**;
-- submissions received on Aug  9 2023 can receive **max 60%**;
-- submissions received on Aug 10 2023 can receive **max 50%**;
-- submissions received on Aug 11 2023 can receive **max 40%**;
-- submissions received on Aug 12 2023 can receive **max 30%**;
-- submissions received on Aug 13 2023 can receive **max 20%**;
-- submissions received on Aug 14 2023 can receive **max 10%**;
-- submissions received on Aug 15 2023 can receive **max  0%**;
-
-**Submission of a working copy of this project is mandatory!** Students who don't submit a complete working project, cannot pass this course. A project is considered complete if all three milestones have been submitted before submission closes and the implementation follows the requirements.  The late submission penalty applied to the project mark will take into consideration the date when the project becomes complete.
-
-All of your source code, including externally linked variables, should be in the `sdds` namespace. Use class declarations in header files wherever appropriate.
-
-
-
-
-
+The project is divided into 3 milestones.
 
 # Milestone 1
 
@@ -152,78 +106,6 @@ The `Station` class has the following structure:
     - this function terminates the printed message with an endline
 
 
-## Tester Module
-
-The tester module and the input files are included in the repository. Do not modify any of them.
-
-## Sample Output
-
-Look in the file `ms1_output.txt` for the command line necessary to start the application and the expected output.
-
-#### Submission
-
-Before the due date, upload to your matrix account the following files:
--  `Utilities.h`
--  `Utilities.cpp`
--  `Station.h`
--  `Station.cpp`
-
-From a command prompt, execute the following command:
-
-```bash
-~profname.proflastname/submit 345_ms1
-```
-
-and follow the instructions.
-
-**A successful submission does not guarantee full credit!**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -259,7 +141,7 @@ struct Item
 - `std::string m_name` – the name of the customer (e.g., John, Sara, etc)
 - `std::string m_product` – the name of the product being assembled (e.g., Desktop, Laptop, etc)
 - `size_t m_cntItem` – a count of the number of items in the customer's order
-- `Item** m_lstItem` – a dynamically allocated array of pointers. Each element of the array points to a dynamically allocated object of type `Item` (see below). **This is the resource** that your class must manage.
+- `Item** m_lstItem` – a dynamically allocated array of pointers. Each element of the array points to a dynamically allocated object of type `Item` (see below). **This is the resource** that this class must manage.
 
 ***Class Variable***
 
@@ -298,77 +180,7 @@ struct Item
     - `SERIAL` - a field of width 6
     - `ITEM_NAME` - a field of size `m_widthField`
     - `STATUS` is either `FILLED` or `TO BE FILLED`
-    - you must use IO manipulators to format this output.
-
-
-
-## Tester Module
-
-The tester module and input files are included in the repository. Do not modify any of them.
-
-## Sample Output
-
-Look in the file `ms2_output.txt` for the command line necessary to start the application and the expected output.
-
-
-
-#### Submission
-
-Before the due date, upload to your matrix account the following files:
-- `Utilities.h`
-- `Utilities.cpp`
-- `Station.h`
-- `Station.cpp`
-- `CustomerOrder.h`
-- `CustomerOrder.cpp`
-
-From a command prompt, execute the following command:
-
-```bash
-~profname.proflastname/submit 345_ms2
-```
-
-and follow the instructions.
-
-**A successful submission does not guarantee full credit!**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    - IO manipulators are used to format this output.
 
 
 
@@ -390,7 +202,7 @@ The `Workstation` module consists of three double-ended queues of `CustomerOrder
 
 Each queue is accessible outside this module's translation unit.
 
-The `Workstation` class defines the structure of an active station on the assembly line and contains all the functionality for filling customer orders with station items.  Each `Workstation` is-a-kind-of `Station`. A `Workstation` object manages order processing for a single `Item` on the assembly line. Since a `Workstation` object represents a single location on the assembly line for filling customer orders with items, the object cannot be copied or moved. Make sure that this capability is deleted in your definition of the `Workstation` class.
+The `Workstation` class defines the structure of an active station on the assembly line and contains all the functionality for filling customer orders with station items.  Each `Workstation` is-a-kind-of `Station`. A `Workstation` object manages order processing for a single `Item` on the assembly line. Since a `Workstation` object represents a single location on the assembly line for filling customer orders with items, the object cannot be copied or moved. This capability is deleted in the definition of the `Workstation` class.
 
 The `Workstation` class includes the following additional information:
 
@@ -439,8 +251,6 @@ The `LineManager` class manages an assembly line of active stations and contains
 
   This function stores the workstations in the order received from the file in the `m_activeLine` instance variable. It loads the contents of the file, stores the address of the next workstation in each element of the collection, identifies the first station in the assembly line and stores its address in the `m_firstStation` attribute. This function also updates the attribute that holds the total number of orders in the `g_pending` queue.  If something goes wrong, this constructor reports an error. 
 
-  **Note**: to receive full marks, use STL algorithms throughout this function, except for iterating through the file records (one `while` loop); marks will be deducted if you use any of `for`, `while` or `do-while` loops except for iterating through the file records. 
-
 - `void reorderStations()` - this modifier reorders the workstations present in the instance variable `m_activeLine` (loaded by the constructor) and stores the reordered collection in the same instance variable. The elements in the reordered collection start with the first station, proceeds to the next, and so forth until the end of the line. 
 
 - `bool run(std::ostream& os)` –  this modifier performs **one** iteration of operations on all of the workstations in the current assembly line by doing the following:
@@ -460,31 +270,3 @@ The tester module and input files are included in the repository. Do not modify 
 ## Sample Output
 
 Look in the file `ms3_output.txt` for the command line necessary to start the application and the expected output.
-
-
-#### Submission
-
-Create a **text** file named `reflect.txt`.  Add any comments you wish to make.
-
-Before the due date, upload to your matrix account the following files:
-- `Utilities.h`
-- `Utilities.cpp`
-- `Station.h`
-- `Station.cpp`
-- `CustomerOrder.h`
-- `CustomerOrder.cpp`
-- `Workstation.h`
-- `Workstation.cpp`
-- `LineManager.h`
-- `LineManager.cpp`
-- `reflect.txt`
-
-From a command prompt, execute the following command:
-
-```bash
-~profname.proflastname/submit 345_ms3
-```
-
-and follow the instructions.
-
-**A successful submission does not guarantee full credit!**
